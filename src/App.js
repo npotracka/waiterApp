@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { fetchTables } from './redux/tablesRedux';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import AddTable from './components/AddTable/AddTable';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/table/:id' element={<Table />}></Route>
+        <Route path='/new_table' element={<AddTable />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />
